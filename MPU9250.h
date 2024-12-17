@@ -40,6 +40,11 @@ THE SOFTWARE.
 #include "I2Cdev.h"
 #ifdef ESP32
 #include <pgmspace.h>
+
+uint8_t min(uint8_t& a, int b) {
+    return (a) > (b) ? (b) : (a);
+}
+
 #else
 #include <avr/pgmspace.h>
 #endif  // ifdef ESP32
